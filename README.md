@@ -12,7 +12,7 @@
 ***
 Website for ordering pastries and cakes in Paris and surrounding areas.
 ### Screenshot
-![Image text](public/img/logoPS.png)
+![Image text](public/img/logoPSs.png)
 ## Technologies
 ***
 Main technologies and libraries
