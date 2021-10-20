@@ -10,9 +10,9 @@
   - [Roadmap (MVP)](#roadmap-mvp)
 ### General Info
 ***
-Website for ordering pastries and cakes in Paris and surrounding areas.
+Website for ordering pastries and cakes in Paris and surrounding areas https://promenadesucree.fr/ .
 ### Screenshot
-![Image text](public/img/logoPS.png)
+![Image text](public/img/logoPSs.png)
 ## Technologies
 ***
 Main technologies and libraries
