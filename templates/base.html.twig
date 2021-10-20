@@ -9,6 +9,7 @@
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
         {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/maintenance.css') }}">
             <link rel="stylesheet" href="{{ asset('css/style.css') }}">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,11 +18,33 @@
     </head>
     <body>
         <div class = "container">
+        <header class>
+            <div>
+                <img src="img/logoPSs.png" alt="Logo" title="Logo Promenade Sucree">
+            </div>
+            <div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Nos Pâtisseries</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+            
+            {% block main %}
+                <main class="content">
 
-            {% block body %}
-        
+                </main>
             {% endblock %}
-        
-        </div> 
+
+        <footer class="all-contact">
+            <div class="contact">
+                <div class="mail">
+                    <p>Contactez-nous</p>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
