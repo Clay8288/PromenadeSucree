@@ -3,7 +3,16 @@
 {% block title %}{{ parent() }} - Site en maintenance
 {% endblock %}
 
-{% block body %}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/maintenance.css') }}">
+               <style>
+                    .main-title{
+                        display: none;
+                    }
+               </style>
+        {% endblock %}
+
+{% block main %}
 <main class="maintenance">
 
     <div class="logoPS">
@@ -12,7 +21,7 @@
 
     <div class="maintenance-text">
         <p>On arrive bientôt pour régaler vos papilles ! </p>
-        <p>En attendant retrouvez nous sur notre page Instagram ou passer votre commande par email.</p>
+        <p>En attendant retrouvez nous sur notre page Instagram ou passez votre commande par email.</p>
         <p>A très vite !</p>
     </div>
 

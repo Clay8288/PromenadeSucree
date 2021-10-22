@@ -38,7 +38,7 @@ class ContactFormType extends AbstractType
                     'class' => 'form'
                 ],
                 'attr' => ['rows' => 7,
-                'placeholder' => 'Message'],
+                'placeholder' => 'Votre Message'],
             ])
         ;
         ;

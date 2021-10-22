@@ -5,29 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/68f1ef2970.js" crossorigin="anonymous"></script>
-    <title>{% block title %}Promenade Sucrée{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet"> 
+    
+    <title>{% block title %}
+        Promenade Sucrée
+    {% endblock %}
+    </title>
+
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('css/maintenance.css') }}">
             <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet"> 
         {% endblock %}
-    </head>
+</head>
     <body>
-        <div class = "container">
-        <header class>
-            <div>
+    <div class="container">
+        <header class="main-title">
+            <div class="logo">
                 <img src="img/logoPSs.png" alt="Logo" title="Logo Promenade Sucree">
             </div>
-            <div>
-                <nav>
-                    <ul>
-                        <li><a href="#">Accueil</a></li>
-                        <li><a href="#">Nos Pâtisseries</a></li>
-                        <li><a href="#">Contact</a></li>
+            <div class="navigation">
+                <nav class="main-navigation">
+                    <ul class="navigation-items">
+                        <li class="navigation-item"><a href="{{ path('main') }}">Accueil</a></li>
+                        <li class="navigation-item"><a href="#">Nos Pâtisseries</a></li>
+                        <li class="navigation-item"><a href="{{ path('contact') }}">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -42,7 +47,7 @@
         <footer class="all-contact">
             <div class="contact">
                 <div class="mail">
-                    <p>Contactez-nous</p>
+                    <p><a href="{{ path('contact') }}">Contactez-nous</a></p>
                 </div>
             </div>
         </footer>
