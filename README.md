@@ -8,11 +8,14 @@
   - [Technologies](#technologies)
   - [Project status](#project-status)
   - [Roadmap (MVP)](#roadmap-mvp)
+  
 ### General Info
 ***
 Website for ordering pastries and cakes in Paris and surrounding areas https://promenadesucree.fr/ .
+
 ### Screenshot
 ![Image text](public/img/logoPSs.png)
+
 ## Technologies
 ***
 Main technologies and libraries
@@ -21,6 +24,6 @@ Main technologies and libraries
 
 ## Project status
 
-The project is currently on hold the time that the client buys a domain name and makes a choice on the brunch menu to be delivered on Sundays
+Project in progress !
 
 ## Roadmap (MVP)
