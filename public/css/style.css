@@ -1,9 +1,4 @@
 
-body{
-    background-image: url("../img/PS.jpeg");
-    background-size: cover;
-}
-
 .container{
     width: 99vw;
     height: 98vh;
@@ -14,8 +9,20 @@ body{
     justify-content: center;
 }
 
+.triangle{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 1700px 990px 0;
+    border-color: transparent #ffd7d7 transparent transparent;
+    position: absolute;
+    z-index: -1000000;
+    right: 0;
+    top: 0;
+    animation: 3s ease-in ;
+}
 
-/****** ACCUEIL *******/
+/****** NAVIGATION *******/
 
 .main-title{
     width: 100%;
@@ -30,7 +37,7 @@ justify-content: space-between;
 }
 
 .logo img{
-    width: 100%;
+    height: 100%;
 }
 
 .navigation{
@@ -69,6 +76,13 @@ justify-content: space-between;
     font-weight: bold;
 }
 
+/****** ACCUEIL *******/
+
+.content{
+    width: 100%;
+    height: 70%;
+}
+
 
 /****** CONTACT *******/
 
@@ -89,8 +103,8 @@ justify-content: space-between;
 
 form{
     width: 100%;
-display: flex;
-justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
 }
 
 .form{
@@ -111,3 +125,82 @@ justify-content: space-around;
     border: 0.1em solid #ff7575;
     border-radius: 10px;
 }
+
+
+/* FOOTER */
+
+.all-contact{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: end;
+}
+
+.contact{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.mail{
+    width: 25%;
+    height: 50%;
+    display: flex;
+    margin: auto 20px;
+    border: 0.1em #737373 dashed;
+}
+
+.mail:hover{
+    background-color: #ff7575;
+    border: 0.1em white dashed;
+}
+
+.mail a{
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mail a:hover{
+    color: white;
+    font-weight: bold;
+}
+
+.mail p{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+
+
+@media only screen and (min-device-width : 480px) and (max-device-width : 1024px) {
+ 
+    /****** MAINTENANCE *******/
+    
+        .mail{
+            width: 50%;
+        }
+    
+        }
+    
+    
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        
+    
+    /****** MAINTENANCE *******/
+        
+        .mail{
+            width: 100%;
+        }
+    
+        }
