@@ -1,7 +1,7 @@
 
 .container{
     width: 99vw;
-    height: 98vh;
+    height: 120vh;
     font-family: 'Source Serif Pro', serif;
     font-size: 1.2em;
     display: flex;
@@ -43,46 +43,186 @@ justify-content: space-between;
 .navigation{
     width: 80%;
     height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .main-navigation{
-    height: 100%;
-    display: flex;
+    width: 98%;
+    height: 80%;
 }
 
 .navigation-items{
     width: 100%;
+    height: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
 }
 
 .navigation-item{
-    width: 20%;
-    display: flex;
-    margin: auto;
-    height: 20%;
-    align-items: center;
+    text-align: center;
+    max-width: 20%;
+    list-style: none;
 }
 
 .navigation-item a{
     text-decoration: none;
     color: black;
-    display: flex;
-    margin: auto;
 }
 
 .navigation-item a:hover{
     color: #ff7575;
-    font-weight: bold;
 }
 
 /****** ACCUEIL *******/
 
 .content{
+    display: flex;
     width: 100%;
     height: 70%;
+    flex-direction: column;
+    align-items: center;
 }
 
+.pictures{
+    display: flex;
+    width: 70%;
+    height: 70%;
+    justify-content: center;
+    position: relative;
+}
+
+@keyframes display {
+    0% {
+      transform: translateX(400px);
+      opacity: 0;
+    }
+    30% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    40% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    80% {
+      transform: translateX(-400px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-400px);
+      opacity: 0;
+    }
+  }
+  
+  .pictures > img {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    animation: display 15s infinite;
+  }
+  img:nth-child(2) {
+    animation-delay: 5s;
+  }
+  img:nth-child(3) {
+    animation-delay: 10s;
+  }
+
+.about{
+    width: 90%;
+    height: 30%;
+    text-align: center;
+}
+
+/****** PATISSERIES *******/
+
+.main-pastries{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pastries-img{
+    width: 100%;
+    height: 100%;
+    grid-template-rows: repeat(20, 40px);
+    grid-template-columns: repeat(29, 60px);
+    display: grid;
+    gap: 10px;
+}
+
+.pastries{
+    width: 80%;
+    margin: 20px 0;
+    height: auto;
+    display: flex;
+}
+
+.pastry{
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5em;
+}
+
+.pastry:nth-child(1){
+    grid-column: 3/13;
+    grid-row: 1/6;
+}
+
+.pastry:nth-child(2){
+    grid-column: 14/24;
+    grid-row: 1/6;
+}
+
+.pastry:nth-child(3){
+    grid-column: 3/13;
+    grid-row: 7/12;
+}
+
+.pastry:nth-child(4){
+    grid-column: 14/24;
+    grid-row: 7/12;
+}
+
+
+.pastry:nth-child(5){
+    grid-column: 8/18;
+    grid-row: 13/18;
+}
+
+.pastry img{
+    height: 100%;
+}
+
+.pastry p{
+    width: 60%;
+}
+
+.pastry a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.pastry a:hover{
+    color: #e66f75;
+}
 
 /****** CONTACT *******/
 
