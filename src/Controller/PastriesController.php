@@ -17,4 +17,15 @@ class PastriesController extends AbstractController
             'controller_name' => 'PastriesController',
         ]);
     }
+
+    /**
+     * @Route("/pastries/{id}", name="category")
+     */
+    public function show(): Response
+    {
+
+        return $this->render('pastries/pastry.html.twig', [
+            'controller_name' => 'PastriesController',
+        ]);
+    }
 }

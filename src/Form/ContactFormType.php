@@ -41,7 +41,6 @@ class ContactFormType extends AbstractType
                 'placeholder' => 'Votre Message'],
             ])
         ;
-        ;
     }
 
     public function configureOptions(OptionsResolver $resolver)

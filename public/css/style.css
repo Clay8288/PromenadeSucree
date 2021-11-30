@@ -1,5 +1,4 @@
-
-.container{
+.container {
     width: 99vw;
     height: 120vh;
     font-family: 'Source Serif Pro', serif;
@@ -9,7 +8,7 @@
     justify-content: center;
 }
 
-.triangle{
+.triangle {
     width: 0;
     height: 0;
     border-style: solid;
@@ -19,40 +18,40 @@
     z-index: -1000000;
     right: 0;
     top: 0;
-    animation: 3s ease-in ;
+    animation: 3s ease-in;
 }
 
 /****** NAVIGATION *******/
 
-.main-title{
+.main-title {
     width: 100%;
-height: 20vh;
-display: flex;
-justify-content: space-between;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
 }
 
-.logo{
+.logo {
     width: 20%;
     height: 100%;
 }
 
-.logo img{
+.logo img {
     height: 100%;
 }
 
-.navigation{
+.navigation {
     width: 80%;
     height: 100%;
     display: flex;
     justify-content: center;
 }
 
-.main-navigation{
+.main-navigation {
     width: 98%;
     height: 80%;
 }
 
-.navigation-items{
+.navigation-items {
     width: 100%;
     height: 100%;
     display: flex;
@@ -63,24 +62,24 @@ justify-content: space-between;
     margin: 0;
 }
 
-.navigation-item{
+.navigation-item {
     text-align: center;
     max-width: 20%;
     list-style: none;
 }
 
-.navigation-item a{
+.navigation-item a {
     text-decoration: none;
     color: black;
 }
 
-.navigation-item a:hover{
+.navigation-item a:hover {
     color: #ff7575;
 }
 
 /****** ACCUEIL *******/
 
-.content{
+.content {
     display: flex;
     width: 100%;
     height: 70%;
@@ -88,7 +87,7 @@ justify-content: space-between;
     align-items: center;
 }
 
-.pictures{
+.pictures {
     display: flex;
     width: 70%;
     height: 70%;
@@ -98,42 +97,48 @@ justify-content: space-between;
 
 @keyframes display {
     0% {
-      transform: translateX(400px);
-      opacity: 0;
+        transform: translateX(400px);
+        opacity: 0;
     }
+
     30% {
-      transform: translateX(0);
-      opacity: 1;
+        transform: translateX(0);
+        opacity: 1;
     }
+
     40% {
-      transform: translateX(0);
-      opacity: 1;
+        transform: translateX(0);
+        opacity: 1;
     }
+
     80% {
-      transform: translateX(-400px);
-      opacity: 0;
+        transform: translateX(-400px);
+        opacity: 0;
     }
+
     100% {
-      transform: translateX(-400px);
-      opacity: 0;
+        transform: translateX(-400px);
+        opacity: 0;
     }
-  }
-  
-  .pictures > img {
+}
+
+.pictures>img {
     height: 100%;
     position: absolute;
     top: 0;
     opacity: 0;
     animation: display 15s infinite;
-  }
-  img:nth-child(2) {
-    animation-delay: 5s;
-  }
-  img:nth-child(3) {
-    animation-delay: 10s;
-  }
+}
 
-.about{
+img:nth-child(2) {
+    animation-delay: 5s;
+}
+
+img:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.about {
     width: 90%;
     height: 30%;
     text-align: center;
@@ -141,88 +146,137 @@ justify-content: space-between;
 
 /****** PATISSERIES *******/
 
-.main-pastries{
+.main-pastries {
     width: 100%;
-    height: 75%;
+    height: 140vh;
     display: flex;
     justify-content: center;
     margin: 20px 0;
 }
 
-.pastries-img{
+.pastries-img {
     width: 100%;
     height: 100%;
-    grid-template-rows: repeat(20, 40px);
+    grid-template-rows: repeat(26, 40px);
     grid-template-columns: repeat(29, 60px);
     display: grid;
     gap: 10px;
 }
 
-.pastries{
+.pastries {
     width: 80%;
     margin: 20px 0;
     height: auto;
     display: flex;
 }
 
-.pastry{
+.pastry {
     width: 100%;
     height: 100%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
     font-family: 'Dancing Script', cursive;
     font-size: 1.5em;
+    position: relative;
 }
 
-.pastry:nth-child(1){
-    grid-column: 3/13;
-    grid-row: 1/6;
+.pastry:nth-child(1) {
+    grid-column: 2/10;
+    grid-row: 1/9;
+    background-color: white;
+    border: 0.4em solid white;
 }
 
-.pastry:nth-child(2){
-    grid-column: 14/24;
-    grid-row: 1/6;
+.pastry:nth-child(2) {
+    grid-column: 12/20;
+    grid-row: 1/9;
+    background-color: white;
+    border: 0.4em solid white;
 }
 
-.pastry:nth-child(3){
-    grid-column: 3/13;
-    grid-row: 7/12;
+.pastry:nth-child(3) {
+    grid-column: 2/10;
+    grid-row: 10/18;
+    background-color: white;
+    border: 0.4em solid white;
 }
 
-.pastry:nth-child(4){
-    grid-column: 14/24;
-    grid-row: 7/12;
+.pastry:nth-child(4) {
+    grid-column: 12/20;
+    grid-row: 10/18;
+    background-color: white;
+    border: 0.4em solid white;
 }
 
-
-.pastry:nth-child(5){
-    grid-column: 8/18;
-    grid-row: 13/18;
+.pastry:nth-child(5) {
+    grid-column: 2/10;
+    grid-row: 19/27;
+    background-color: white;
+    border: 0.4em solid white;
 }
 
-.pastry img{
+.first {
+    width: 270px;
     height: 100%;
+    object-fit: cover;
 }
 
-.pastry p{
-    width: 60%;
+.second {
+    width: 270px;
+    position: absolute;
+    height: 190px;
+    object-fit: cover;
+    right: 0;
+    top: 0;
 }
 
-.pastry a{
+.third {
+    width: 270px;
+    height: 190px;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.first-maca, .second-maca{
+    width: 270px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(187, 187, 187, 0.6);
+    color: #050505;
+    font-family: 'Dancing Script', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.25s;
+}
+
+.image__overlay{
+    opacity: 0;
+}
+
+.image__overlay:hover {
+  opacity: 1;
+}
+
+.pastry a {
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
 
-.pastry a:hover{
+.pastry a:hover {
     color: #e66f75;
 }
+
 
 /****** CONTACT *******/
 
@@ -235,30 +289,47 @@ justify-content: space-between;
     align-items: center;
 }
 
-.form-group{
+.form-control{
+    width: 70%;
+}
+
+#commande_form_livraison{
+    width: 50%;
+    height: 25%;
+    margin-top: 2%;
+}
+
+.obli{
+    width: 70%;
+    font-size: 0.7em;
+}
+
+.form-group {
     width: 70%;
     display: flex;
     justify-content: center;
 }
 
-form{
+form {
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
 
-.form{
+.form {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-#contact_form_nom, #contact_form_email, #contact_form_message{
+#contact_form_nom,
+#contact_form_email,
+#contact_form_message {
     width: 80%;
     height: 120%;
 }
 
-.btn{
+.btn {
     width: 150px;
     height: 40px;
     background-color: white;
@@ -266,24 +337,34 @@ form{
     border-radius: 10px;
 }
 
+.btn:hover{
+    background-color: #ff7575;
+    border: 0.1em solid white;
+    color: white;
+    font-weight: bold;
+}
+
+.required{
+    width: 38%;
+}
 
 /* FOOTER */
 
-.all-contact{
+.all-contact {
     width: 100%;
     height: 10%;
     display: flex;
     justify-content: end;
 }
 
-.contact{
+.contact {
     width: 50%;
     height: 100%;
     display: flex;
     justify-content: end;
 }
 
-.mail{
+.mail {
     width: 25%;
     height: 50%;
     display: flex;
@@ -291,12 +372,12 @@ form{
     border: 0.1em #737373 dashed;
 }
 
-.mail:hover{
+.mail:hover {
     background-color: #ff7575;
     border: 0.1em white dashed;
 }
 
-.mail a{
+.mail a {
     color: black;
     text-decoration: none;
     width: 100%;
@@ -306,12 +387,12 @@ form{
     align-items: center;
 }
 
-.mail a:hover{
+.mail a:hover {
     color: white;
     font-weight: bold;
 }
 
-.mail p{
+.mail p {
     width: 100%;
     height: 100%;
     display: flex;
@@ -324,23 +405,23 @@ form{
 
 
 @media only screen and (min-device-width : 480px) and (max-device-width : 1024px) {
- 
+
     /****** MAINTENANCE *******/
-    
-        .mail{
-            width: 50%;
-        }
-    
-        }
-    
-    
-    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-        
-    
+
+    .mail {
+        width: 50%;
+    }
+
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+
     /****** MAINTENANCE *******/
-        
-        .mail{
-            width: 100%;
-        }
-    
-        }
+
+    .mail {
+        width: 100%;
+    }
+
+}
