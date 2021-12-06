@@ -29,9 +29,20 @@ class Categories
      */
     private $pastry;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Pictures::class, mappedBy="categories")
+     */
+    private $pictures;
+
     public function __construct()
     {
         $this->pastry = new ArrayCollection();
+        $this->pictures = new ArrayCollection();
+    }
+
+    public function __toString(): string
+    {
+        return $this->pictures;
     }
 
     public function getId(): ?int
@@ -75,6 +86,37 @@ class Categories
             // set the owning side to null (unless already changed)
             if ($pastry->getCategory() === $this) {
                 $pastry->setCategory(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Pictures[]
+     */
+
+    public function getPictures(): Collection
+    {
+        return $this->pictures;
+    }
+
+    public function addPicture(Pictures $picture): self
+    {
+        if (!$this->pictures->contains($picture)) {
+            $this->pictures[] = $picture;
+            $picture->setCategories($this);
+        }
+
+        return $this;
+    }
+
+    public function removePicture(Pictures $picture): self
+    {
+        if ($this->pictures->removeElement($picture)) {
+            // set the owning side to null (unless already changed)
+            if ($picture->getCategories() === $this) {
+                $picture->setCategories(null);
             }
         }
 

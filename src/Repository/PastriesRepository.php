@@ -36,15 +36,23 @@ class PastriesRepository extends ServiceEntityRepository
     }
     */
 
-    /*
-    public function findOneBySomeField($value): ?Pastries
+    
+    public function findOneByCategory($id)
     {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+
+        $conn = $this->getEntityManager()->getConnection(); 
+        $sql = "SELECT category_id FROM `pastries` WHERE category_id =". $id;
+
+        $queryBuilder = $this->createQueryBuilder('f');
+        $queryBuilder->select('p.category_id')
+        ->from(Pastries::class, 'p')
+        ->innerJoin('p', 'category', 'c', 'p.id = c.category_id')
+        ->setParameter('id', $id);
+
+        $query = $queryBuilder->getQuery();
+
+        return $query;
+
     }
-    */
+    
 }

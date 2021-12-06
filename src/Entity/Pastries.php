@@ -28,12 +28,12 @@ class Pastries
     private $quantity;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="text", nullable=true)
      */
     private $description;
 
     /**
-     * @ORM\Column(type="smallint", nullable=true)
+     * @ORM\Column(type="float", nullable=true)
      */
     private $price;
 
@@ -84,12 +84,12 @@ class Pastries
         return $this;
     }
 
-    public function getPrice(): ?int
+    public function getPrice(): ?float
     {
         return $this->price;
     }
 
-    public function setPrice(?int $price): self
+    public function setPrice(?float $price): self
     {
         $this->price = $price;
 

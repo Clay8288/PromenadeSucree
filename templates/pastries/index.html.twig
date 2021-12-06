@@ -6,55 +6,24 @@
     <div class="main-pastries">
         <div class="pastries">
             <div class="pastries-img">
+                {% for category in categories %}
                     <div class="pastry">
-                        <img src="img/entremet.jpg" alt="" class="first">
-                        <img src="img/entremet2.jpg" alt="" class="second">
-                        <img src="img/entremet3.jpg" alt="" class="third">
+                        {% if category.pictures.0.name is defined and category.pictures.0.name is not null %}
+                            <img src="img/{{ category.pictures.0.name }}" alt="{{ category.pictures.0.name }}" class="first">
+                        {% endif %} 
+                        {% if category.pictures.1.name is defined and category.pictures.1.name is not null %}
+                            <img src="img/{{ category.pictures.1.name }}" alt="{{ category.pictures.1.name }}" class="second">
+                        {% endif %}
+                        {% if category.pictures.2.name is defined and category.pictures.2.name is not null  %}
+                            <img src="img/{{ category.pictures.2.name }}" alt="{{ category.pictures.2.name }}" class="third">
+                        {% endif %}  
                         <div class="image__overlay">
                             <div class="image__title">
-                                <h2><a href ="">Entremets</a></h2>
+                                <h2><a href ="{{ path('category', {id:category.id}) }}">{{ category.name }}</a></h2>
                             </div>
                         </div>
-                </div>
-                <div class="pastry">
-                        <img src="img/gateaux.jpg" alt="" class="first">
-                        <img src="img/gateaux.png" alt="" class="second">
-                        <img src="img/gateaux3.jpg" alt="" class="third">
-                        <div class="image__overlay">
-                            <div class="image__title">
-                                <h2><a href ="">Gâteaux</a></h2>
-                            </div>
-                        </div>
-                </div>
-                <div class="pastry">
-                        <img src="img/tartes3.jpg" alt="" class="first">
-                        <img src="img/tartes.jpg" alt="" class="second">
-                        <img src="img/tartes2.jpg" alt="" class="third">
-                        <div class="image__overlay">
-                            <div class="image__title">
-                                <h2><a href ="">Tartes</a></h2>
-                            </div>
-                        </div>
-                </div>
-                <div class="pastry">
-                        <img src="img/biscuits2.jpg" alt="" class="first">
-                        <img src="img/biscuits.jpg" alt="" class="second">
-                        <img src="img/cookie.jpg" alt="" class="third">
-                        <div class="image__overlay">
-                            <div class="image__title">
-                                <h2><a href ="">Tartes</a></h2>
-                            </div>
-                        </div>
-                </div>
-                <div class="pastry">
-                        <img src="img/macarons.jpg" alt="" class="first-maca">
-                        <img src="img/macarons2.jpg" alt="" class="second-maca">
-                        <div class="image__overlay">
-                            <div class="image__title">
-                                <h2><a href ="">Macarons</a></h2>
-                            </div>
-                        </div>
-                </div>               
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>

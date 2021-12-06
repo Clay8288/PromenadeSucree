@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} - Nos Pâtisseries{% endblock %}
+
+{% block main %}
+    <div class="main-pastry">
+        <h2>{{ category.name }}</h2>
+        <div class="pastries-details">
+            <ul>
+            {% for past in pastry %}
+                <li>
+                    <h4>{{ past.name }}</h4>  
+                    <p>{{ past.description|nl2br }}</p>
+                    <p>{{ past.price|number_format }} &euro;</p>
+                </li>
+                {% endfor %} 
+            </ul>
+        </div>
+        <div class="group-price">
+            <ul>
+            {% if pastries.id == 1 %}
+                <li>4/6 personnes : 21 &euro;</li>
+                <li>6/8 personnes : 28 &euro; </li>
+                <li>8/10 personnes : 35 &euro;</li>
+            {% endif %} 
+            {% if pastries.id == 3 %}
+                <li>4/6 personnes : 18 &euro;</li>
+                <li>6/8 personnes : 24 &euro; </li>
+                <li>8/10 personnes : 30 &euro;</li>
+            {% endif %} 
+            </ul>
+        </div>
+        <div class="return">
+            <p><a href="{{ path('pastries') }}">Retour</a></p>
+        </div>
+    </div>
+{% endblock %}
