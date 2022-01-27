@@ -1,31 +1,32 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ parent() }} - Contact
+{% block title %}
+	{{ parent() }}
+	- Contact
 {% endblock %}
 
 {% block main %}
-    <div class="form-item">
+	<div class="form-item">
 
-        <div class="form-group">
-        {{ form_start(contactForm) }}
-            {{ form_row(contactForm.nom, {'attr': {'class': 'form-control'}}) }}
-        </div>
+		<div class="form-group">
+			{{ form_start(contactForm) }}
+			{{ form_row(contactForm.nom, {'attr': {'class': 'form-control'}}) }}
+		</div>
 
-        <div class="form-group">
-            {{ form_row(contactForm.email, {'attr': {'class': 'form-control'}}) }}
-        </div>
+		<div class="form-group">
+			{{ form_row(contactForm.email, {'attr': {'class': 'form-control'}}) }}
+		</div>
 
-        <div class="form-group">
-            {{ form_row(contactForm.message, {'attr': {'class': 'form-control'}}) }}
-        </div>
+		<div class="form-group">
+			{{ form_row(contactForm.message, {'attr': {'class': 'form-control'}}) }}
+		</div>
 
-        <div class="form-group">
-            <input type="submit" value="Envoyer" class="btn">
-        </div>
-        {{ form_end(contactForm) }}
-        
-    </div>
+		<div class="form-group">
+			<input type="submit" value="Envoyer" class="btn">
+		</div>
+		{{ form_end(contactForm) }}
 
+	</div>
 
 
 {% endblock %}

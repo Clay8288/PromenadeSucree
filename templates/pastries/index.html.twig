@@ -1,30 +1,35 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ parent() }} - Nos Pâtisseries{% endblock %}
+{% block title %}
+	{{ parent() }}
+	- Nos Pâtisseries
+{% endblock %}
 
 {% block main %}
-    <div class="main-pastries">
-        <div class="pastries">
-            <div class="pastries-img">
-                {% for category in categories %}
-                    <div class="pastry">
-                        {% if category.pictures.0.name is defined and category.pictures.0.name is not null %}
-                            <img src="img/{{ category.pictures.0.name }}" alt="{{ category.pictures.0.name }}" class="first">
-                        {% endif %} 
-                        {% if category.pictures.1.name is defined and category.pictures.1.name is not null %}
-                            <img src="img/{{ category.pictures.1.name }}" alt="{{ category.pictures.1.name }}" class="second">
-                        {% endif %}
-                        {% if category.pictures.2.name is defined and category.pictures.2.name is not null  %}
-                            <img src="img/{{ category.pictures.2.name }}" alt="{{ category.pictures.2.name }}" class="third">
-                        {% endif %}  
-                        <div class="image__overlay">
-                            <div class="image__title">
-                                <h2><a href ="{{ path('category', {id:category.id}) }}">{{ category.name }}</a></h2>
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
+	<div class="main-pastries">
+		<div class="pastries">
+			<div class="pastries-img">
+				{% for category in categories %}
+					<div class="pastry">
+						{% if category.pictures.0.name is defined and category.pictures.0.name is not null %}
+							<img src="img/{{ category.pictures.0.name }}" alt="{{ category.pictures.0.name }}" class="first">
+						{% endif %}
+						{% if category.pictures.1.name is defined and category.pictures.1.name is not null %}
+							<img src="img/{{ category.pictures.1.name }}" alt="{{ category.pictures.1.name }}" class="second">
+						{% endif %}
+						{% if category.pictures.2.name is defined and category.pictures.2.name is not null  %}
+							<img src="img/{{ category.pictures.2.name }}" alt="{{ category.pictures.2.name }}" class="third">
+						{% endif %}
+						<div class="image__overlay">
+							<div class="image__title">
+								<h2>
+									<a href="{{ path('category', {id:category.id}) }}">{{ category.name }}</a>
+								</h2>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
 {% endblock %}

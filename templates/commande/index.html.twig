@@ -1,46 +1,50 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ parent() }} - Commandes {% endblock %}
-
-{% block main %}
- <div class="form-item">
-
-        <div class="form-group">
-        {{ form_start(commandeForm) }}
-            {{ form_row(commandeForm.nom, {'attr': {'class': 'form-control'}}) }}
-        </div>
-
-        <div class="form-group">
-        {{ form_start(commandeForm) }}
-            {{ form_row(commandeForm.telephone, {'attr': {'class': 'form-control'}}) }}
-        </div>
-
-        <div class="form-group">
-            {{ form_row(commandeForm.email, {'attr': {'class': 'form-control'}}) }}
-        </div>
-
-        <div class="form-group">
-        {{ form_start(commandeForm) }}
-            {{ form_row(commandeForm.livraison, {'attr': {'class': 'form-control'}}) }}
-        </div>
-
-        <div class="form-group">
-        {{ form_start(commandeForm) }}
-            {{ form_row(commandeForm.adresse, {'attr': {'class': 'form-control'}}) }}
-        </div>
-
-        <div class="form-group">
-            {{ form_row(commandeForm.message, {'attr': {'class': 'form-control'}}) }}
-        </div>
-
-        <div class="form-group">
-            <input type="submit" value="Envoyer" class="btn">
-        </div>
-        {{ form_end(commandeForm) }}
-        
-    </div>
-    <div class="obli">
-        <p><b>*</b> Champs obligatoires</p>
-    </div>
+{% block title %}
+	{{ parent() }}
+	- Commandes
 {% endblock %}
 
+{% block main %}
+	<div class="form-item">
+
+		<div class="form-group">
+			{{ form_start(commandeForm) }}
+			{{ form_row(commandeForm.nom, {'attr': {'class': 'form-control'}}) }}
+		</div>
+
+		<div class="form-group">
+			{{ form_start(commandeForm) }}
+			{{ form_row(commandeForm.telephone, {'attr': {'class': 'form-control'}}) }}
+		</div>
+
+		<div class="form-group">
+			{{ form_row(commandeForm.email, {'attr': {'class': 'form-control'}}) }}
+		</div>
+
+		<div class="form-group">
+			{{ form_start(commandeForm) }}
+			{{ form_row(commandeForm.livraison, {'attr': {'class': 'form-control'}}) }}
+		</div>
+
+		<div class="form-group">
+			{{ form_start(commandeForm) }}
+			{{ form_row(commandeForm.adresse, {'attr': {'class': 'form-control'}}) }}
+		</div>
+
+		<div class="form-group">
+			{{ form_row(commandeForm.message, {'attr': {'class': 'form-control'}}) }}
+		</div>
+
+		<div class="form-group">
+			<input type="submit" value="Envoyer" class="btn">
+		</div>
+		{{ form_end(commandeForm) }}
+
+	</div>
+	<div class="obli">
+		<p>
+			<b>*</b>
+			Champs obligatoires</p>
+	</div>
+{% endblock %}
